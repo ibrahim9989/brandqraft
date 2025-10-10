@@ -1,0 +1,329 @@
+.expertise {
+  padding: 200px 0 220px;
+  background: #fafafa;
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.sectionTitle {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.055em;
+  margin-bottom: 100px;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sectionTitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expertiseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.serviceCard {
+  background: #ffffff;
+  padding: 60px 48px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+  transform: translateY(60px);
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+}
+
+.serviceCard.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.serviceCard:nth-child(1).visible {
+  transition-delay: 0.1s;
+}
+
+.serviceCard:nth-child(2).visible {
+  transition-delay: 0.2s;
+}
+
+.serviceCard:nth-child(3).visible {
+  transition-delay: 0.3s;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.02) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-12px);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 
+    0 40px 100px rgba(0, 0, 0, 0.12),
+    0 0 0 0.5px rgba(0, 0, 0, 0.03) inset;
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceNumber {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover .serviceNumber {
+  color: rgba(0, 0, 0, 0.6);
+  transform: translateX(4px);
+}
+
+.serviceTitle {
+  font-size: clamp(24px, 2vw, 28px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover .serviceTitle {
+  letter-spacing: -0.035em;
+}
+
+.serviceDescription {
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: #1d1d1f;
+  opacity: 0.75;
+  margin-bottom: auto;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover .serviceDescription {
+  opacity: 0.85;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+  position: relative;
+}
+
+.serviceLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #000000;
+  transition: width 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover .serviceLink {
+  transform: translateX(6px);
+}
+
+.serviceCard:hover .serviceLink::after {
+  width: calc(100% - 28px);
+}
+
+.serviceLink svg {
+  transition: transform 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.serviceCard:hover .serviceLink svg {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .expertise {
+    padding: 160px 0 180px;
+  }
+
+  .container {
+    padding: 0 8%;
+  }
+
+  .sectionTitle {
+    margin-bottom: 80px;
+  }
+
+  .expertiseGrid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .expertise {
+    padding: 140px 0 160px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 72px;
+  }
+
+  .expertiseGrid {
+    gap: 36px;
+  }
+
+  .serviceCard {
+    padding: 52px 40px;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .expertiseGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .sectionTitle {
+    font-size: clamp(38px, 5vw, 56px);
+    margin-bottom: 64px;
+  }
+
+  .serviceCard {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise {
+    padding: 120px 0 140px;
+  }
+
+  .container {
+    padding: 0 6%;
+  }
+
+  .sectionTitle {
+    font-size: 38px;
+    margin-bottom: 56px;
+    letter-spacing: -0.045em;
+  }
+
+  .serviceCard {
+    padding: 48px 36px;
+  }
+
+  .serviceTitle {
+    font-size: 24px;
+  }
+
+  .serviceDescription {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise {
+    padding: 100px 0 120px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+    margin-bottom: 48px;
+  }
+
+  .expertiseGrid {
+    gap: 24px;
+  }
+
+  .serviceCard {
+    padding: 40px 32px;
+    border-radius: 16px;
+  }
+
+  .serviceCard::before {
+    border-radius: 16px;
+  }
+
+  .serviceNumber {
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+
+  .serviceTitle {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .serviceDescription {
+    font-size: 16px;
+  }
+
+  .serviceLink {
+    font-size: 15px;
+    margin-top: 28px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .sectionTitle,
+  .serviceCard,
+  .serviceNumber,
+  .serviceTitle,
+  .serviceDescription,
+  .serviceLink {
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,444 @@
+.work {
+  padding: 200px 0 220px;
+  background: #000000;
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.sectionTitle {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.055em;
+  margin-bottom: 100px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sectionTitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.featuredWork {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 120px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featuredWork.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectVisual {
+  position: relative;
+}
+
+.projectFrame {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 40px 100px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.8s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.projectFrame:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 50px 120px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.projectPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #1a1a1a 0%,
+    #2a2a2a 50%,
+    #1a1a1a 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.projectPlaceholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 60%
+  );
+  animation: rotateLight 20s linear infinite;
+}
+
+@keyframes rotateLight {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.placeholderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.placeholderIcon {
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.projectFrame:hover .placeholderIcon {
+  color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.projectMeta {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+}
+
+.projectTitle {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.projectDescription {
+  font-size: clamp(17px, 1.5vw, 19px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.projectTags span {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.projectTags span:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.clientSection {
+  text-align: center;
+}
+
+.clientsLabel {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+}
+
+.clientLogos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+}
+
+.logoItem.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logoItem:nth-child(1).visible { transition-delay: 0.1s; }
+.logoItem:nth-child(2).visible { transition-delay: 0.15s; }
+.logoItem:nth-child(3).visible { transition-delay: 0.2s; }
+.logoItem:nth-child(4).visible { transition-delay: 0.25s; }
+.logoItem:nth-child(5).visible { transition-delay: 0.3s; }
+.logoItem:nth-child(6).visible { transition-delay: 0.35s; }
+
+.logoItem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.logoItem:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+.logoItem:hover::before {
+  transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .work {
+    padding: 160px 0 180px;
+  }
+
+  .container {
+    padding: 0 8%;
+  }
+
+  .sectionTitle {
+    margin-bottom: 80px;
+  }
+
+  .featuredWork {
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .work {
+    padding: 140px 0 160px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 72px;
+  }
+
+  .featuredWork {
+    gap: 48px;
+    margin-bottom: 80px;
+  }
+
+  .clientLogos {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .featuredWork {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 72px;
+  }
+
+  .sectionTitle {
+    font-size: clamp(38px, 5vw, 56px);
+    margin-bottom: 64px;
+  }
+
+  .clientLogos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    padding: 120px 0 140px;
+  }
+
+  .container {
+    padding: 0 6%;
+  }
+
+  .sectionTitle {
+    font-size: 38px;
+    margin-bottom: 56px;
+    letter-spacing: -0.045em;
+  }
+
+  .featuredWork {
+    margin-bottom: 64px;
+  }
+
+  .projectFrame {
+    border-radius: 20px;
+  }
+
+  .projectInfo {
+    gap: 20px;
+  }
+
+  .projectTitle {
+    font-size: 28px;
+  }
+
+  .projectDescription {
+    font-size: 17px;
+  }
+
+  .clientLogos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .logoItem {
+    padding: 28px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work {
+    padding: 100px 0 120px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+    margin-bottom: 48px;
+  }
+
+  .featuredWork {
+    margin-bottom: 56px;
+  }
+
+  .projectFrame {
+    border-radius: 16px;
+  }
+
+  .projectInfo {
+    gap: 18px;
+  }
+
+  .projectTitle {
+    font-size: 26px;
+  }
+
+  .projectDescription {
+    font-size: 16px;
+  }
+
+  .projectTags {
+    gap: 8px;
+  }
+
+  .projectTags span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .clientLogos {
+    gap: 16px;
+  }
+
+  .logoItem {
+    padding: 24px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .sectionTitle,
+  .featuredWork,
+  .logoItem,
+  .projectFrame::before,
+  .placeholderIcon {
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .projectFrame:hover,
+  .logoItem:hover {
+    transform: none;
+  }
+}

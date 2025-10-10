@@ -1,0 +1,295 @@
+.approach {
+  padding: 200px 0 220px;
+  background: #ffffff;
+  position: relative;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.sectionTitle {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.055em;
+  margin-bottom: 100px;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sectionTitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.approachFlow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stepContainer {
+  position: relative;
+}
+
+.approachStep {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 60px;
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.approachStep.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.approachStep:nth-child(1).visible { transition-delay: 0.1s; }
+.approachStep:nth-child(2).visible { transition-delay: 0.2s; }
+.approachStep:nth-child(3).visible { transition-delay: 0.3s; }
+.approachStep:nth-child(4).visible { transition-delay: 0.4s; }
+
+.stepNumber {
+  font-size: 64px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.15);
+  transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.approachStep:hover .stepNumber {
+  color: rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepTitle {
+  font-size: clamp(28px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.approachStep:hover .stepTitle {
+  letter-spacing: -0.035em;
+}
+
+.stepDescription {
+  font-size: clamp(17px, 1.5vw, 19px);
+  line-height: 1.6;
+  color: #1d1d1f;
+  opacity: 0.75;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.approachStep:hover .stepDescription {
+  opacity: 0.85;
+}
+
+.approachConnector {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  margin: 0 auto;
+  position: relative;
+  left: 60px;
+  border-radius: 1px;
+  transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.approachStep:hover + .approachConnector {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .approach {
+    padding: 160px 0 180px;
+  }
+
+  .container {
+    padding: 0 8%;
+  }
+
+  .sectionTitle {
+    margin-bottom: 80px;
+  }
+
+  .approachStep {
+    gap: 48px;
+    padding: 48px 0;
+  }
+
+  .stepNumber {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .approach {
+    padding: 140px 0 160px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 72px;
+  }
+
+  .approachStep {
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .stepNumber {
+    font-size: 48px;
+  }
+
+  .approachConnector {
+    left: 48px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .approachStep {
+    grid-template-columns: 100px 1fr;
+    gap: 36px;
+    padding: 36px 0;
+  }
+
+  .sectionTitle {
+    font-size: clamp(38px, 5vw, 56px);
+    margin-bottom: 64px;
+  }
+
+  .stepNumber {
+    font-size: 42px;
+  }
+
+  .approachConnector {
+    left: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach {
+    padding: 120px 0 140px;
+  }
+
+  .container {
+    padding: 0 6%;
+  }
+
+  .sectionTitle {
+    font-size: 38px;
+    margin-bottom: 56px;
+    letter-spacing: -0.045em;
+  }
+
+  .approachStep {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 0;
+    text-align: center;
+  }
+
+  .stepNumber {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .stepTitle {
+    font-size: 28px;
+  }
+
+  .stepDescription {
+    font-size: 17px;
+  }
+
+  .approachConnector {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .approach {
+    padding: 100px 0 120px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .sectionTitle {
+    font-size: 34px;
+    margin-bottom: 48px;
+  }
+
+  .approachStep {
+    padding: 28px 0;
+    gap: 20px;
+  }
+
+  .stepNumber {
+    font-size: 32px;
+  }
+
+  .stepTitle {
+    font-size: 26px;
+  }
+
+  .stepDescription {
+    font-size: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .sectionTitle,
+  .approachStep,
+  .stepNumber,
+  .stepTitle,
+  .stepDescription,
+  .approachConnector {
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .approachStep:hover .stepNumber {
+    transform: none;
+  }
+}

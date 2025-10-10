@@ -1,0 +1,212 @@
+.shadowSystem {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.dynamicShadow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.05) 30%,
+    transparent 70%
+  );
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.depthLayer1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: floatShadow1 15s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.depthLayer2 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.06) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  animation: floatShadow2 20s ease-in-out infinite;
+  filter: blur(30px);
+}
+
+.depthLayer3 {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.07) 0%,
+    transparent 65%
+  );
+  border-radius: 50%;
+  animation: floatShadow3 25s ease-in-out infinite;
+  filter: blur(35px);
+}
+
+.floatingShadow1 {
+  position: absolute;
+  top: 15%;
+  right: 30%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.04) 0%,
+    transparent 50%
+  );
+  border-radius: 50%;
+  animation: floatShadow4 12s ease-in-out infinite;
+  filter: blur(25px);
+}
+
+.floatingShadow2 {
+  position: absolute;
+  bottom: 20%;
+  right: 25%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.05) 0%,
+    transparent 55%
+  );
+  border-radius: 50%;
+  animation: floatShadow5 18s ease-in-out infinite;
+  filter: blur(28px);
+}
+
+.floatingShadow3 {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.03) 0%,
+    transparent 45%
+  );
+  border-radius: 50%;
+  animation: floatShadow6 14s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+@keyframes floatShadow1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.2);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(-15px, 25px) scale(0.8);
+    opacity: 0.4;
+  }
+}
+
+@keyframes floatShadow2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translate(-25px, 30px) scale(1.3);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(20px, -15px) scale(0.7);
+    opacity: 0.3;
+  }
+}
+
+@keyframes floatShadow3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translate(35px, -25px) scale(1.4);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translate(-20px, 20px) scale(0.6);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatShadow4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-20px, -30px) scale(1.5);
+    opacity: 0.6;
+  }
+}
+
+@keyframes floatShadow5 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(25px, 20px) scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+@keyframes floatShadow6 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-15px, 25px) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+/* Hide on mobile for performance */
+@media (max-width: 768px) {
+  .shadowSystem {
+    display: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .depthLayer1,
+  .depthLayer2,
+  .depthLayer3,
+  .floatingShadow1,
+  .floatingShadow2,
+  .floatingShadow3 {
+    animation: none;
+  }
+}

@@ -1,0 +1,99 @@
+.loadingOverlay {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation: fadeOut 0.8s ease-in-out 1.2s forwards;
+}
+
+.loadingContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.brandLogo {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.loadingBar {
+  width: 200px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loadingProgress {
+  height: 100%;
+  background: linear-gradient(90deg, #000000 0%, #333333 50%, #000000 100%);
+  background-size: 200% 100%;
+  animation: progressLoad 1.5s ease-in-out infinite, shimmer 2s ease-in-out infinite;
+  border-radius: 1px;
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out 0.6s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progressLoad {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

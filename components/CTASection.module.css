@@ -1,0 +1,282 @@
+.ctaSection {
+  padding: 200px 0 220px;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.ctaBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.03;
+}
+
+.blueprintGrid {
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px);
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, 60px);
+  }
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ctaContent.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaTitle {
+  font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 600;
+  line-height: 1.0;
+  letter-spacing: -0.055em;
+  margin-bottom: 32px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.ctaDescription {
+  font-size: clamp(19px, 1.8vw, 22px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 56px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 44px;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 980px;
+  transition: all 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+  letter-spacing: -0.01em;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+  border-radius: 980px;
+}
+
+.btnPrimary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+}
+
+.btnPrimary:hover::before {
+  opacity: 1;
+}
+
+.btnPrimary:active {
+  transform: scale(0.98);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 44px;
+  background: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 980px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnSecondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+  z-index: -1;
+  border-radius: 980px;
+}
+
+.btnSecondary:hover {
+  color: #000000;
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btnSecondary:hover::before {
+  transform: translateY(0);
+}
+
+.btnSecondary:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .ctaSection {
+    padding: 160px 0 180px;
+  }
+
+  .container {
+    padding: 0 8%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .ctaSection {
+    padding: 140px 0 160px;
+  }
+
+  .ctaTitle {
+    margin-bottom: 28px;
+  }
+
+  .ctaDescription {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ctaTitle {
+    font-size: clamp(38px, 5vw, 56px);
+    margin-bottom: 24px;
+  }
+
+  .ctaDescription {
+    font-size: 19px;
+    margin-bottom: 44px;
+  }
+
+  .ctaButtons {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 120px 0 140px;
+  }
+
+  .container {
+    padding: 0 6%;
+  }
+
+  .ctaTitle {
+    font-size: 38px;
+    margin-bottom: 20px;
+    letter-spacing: -0.045em;
+  }
+
+  .ctaDescription {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaSection {
+    padding: 100px 0 120px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .ctaTitle {
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+
+  .ctaDescription {
+    font-size: 17px;
+    margin-bottom: 36px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    padding: 14px 36px;
+    font-size: 15px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .ctaContent,
+  .blueprintGrid {
+    animation: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .btnPrimary,
+  .btnSecondary {
+    transition: none;
+  }
+}
