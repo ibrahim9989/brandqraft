@@ -1,19 +1,19 @@
 .about {
-  padding: 200px 0 220px;
+  padding: 160px 0 180px;
   background: #ffffff;
   position: relative;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 6%;
 }
 
 .aboutGrid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 160px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 120px;
   align-items: center;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .sectionTitle {
-  font-size: clamp(44px, 5.5vw, 72px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 600;
-  line-height: 1.0;
-  letter-spacing: -0.055em;
-  margin-bottom: 48px;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin-bottom: 36px;
   color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
 }

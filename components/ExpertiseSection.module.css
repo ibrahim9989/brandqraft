@@ -1,21 +1,21 @@
 .expertise {
-  padding: 200px 0 220px;
+  padding: 160px 0 180px;
   background: #fafafa;
   position: relative;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10%;
+  padding: 0 6%;
 }
 
 .sectionTitle {
-  font-size: clamp(44px, 5.5vw, 72px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 600;
-  line-height: 1.0;
-  letter-spacing: -0.055em;
-  margin-bottom: 100px;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin-bottom: 80px;
   color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
