@@ -1,0 +1,289 @@
+.ultraLuxuryEffects {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.luxuryOrb1 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.04) 30%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: luxuryFloat1 25s ease-in-out infinite;
+}
+
+.luxuryOrb2 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.06) 0%,
+    rgba(0, 0, 0, 0.03) 25%,
+    transparent 65%
+  );
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: luxuryFloat2 30s ease-in-out infinite;
+}
+
+.luxuryOrb3 {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.07) 0%,
+    rgba(0, 0, 0, 0.035) 35%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(70px);
+  animation: luxuryFloat3 35s ease-in-out infinite;
+}
+
+.luxuryRays {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(0, 0, 0, 0.02) 50%,
+    transparent 60%
+  );
+  animation: luxuryRays 20s ease-in-out infinite;
+}
+
+.premiumShimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.03) 75%,
+    transparent 100%
+  );
+  animation: premiumShimmer 15s ease-in-out infinite;
+}
+
+.floatingLuxury1 {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.08);
+  animation: luxuryFloat4 40s ease-in-out infinite;
+  font-family: serif;
+}
+
+.floatingLuxury2 {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.06);
+  animation: luxuryFloat5 45s ease-in-out infinite;
+  font-family: serif;
+}
+
+.floatingLuxury3 {
+  position: absolute;
+  bottom: 35%;
+  right: 25%;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.07);
+  animation: luxuryFloat6 50s ease-in-out infinite;
+  font-family: serif;
+}
+
+.floatingLuxury4 {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.05);
+  animation: luxuryFloat7 35s ease-in-out infinite;
+  font-family: serif;
+}
+
+@keyframes luxuryFloat1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  33% {
+    transform: translate(30px, -25px) scale(1.1);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.9);
+    opacity: 0.4;
+  }
+}
+
+@keyframes luxuryFloat2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translate(-35px, 25px) scale(1.2);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(25px, -20px) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+@keyframes luxuryFloat3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7;
+  }
+  40% {
+    transform: translate(40px, -30px) scale(1.3);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translate(-25px, 25px) scale(0.7);
+    opacity: 0.5;
+  }
+}
+
+@keyframes luxuryRays {
+  0%, 100% {
+    transform: rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes premiumShimmer {
+  0%, 100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes luxuryFloat4 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.08;
+  }
+  25% {
+    transform: translate(-20px, 15px) rotate(90deg);
+    opacity: 0.12;
+  }
+  50% {
+    transform: translate(15px, -20px) rotate(180deg);
+    opacity: 0.06;
+  }
+  75% {
+    transform: translate(-10px, -15px) rotate(270deg);
+    opacity: 0.10;
+  }
+}
+
+@keyframes luxuryFloat5 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.06;
+  }
+  30% {
+    transform: translate(25px, -15px) rotate(120deg);
+    opacity: 0.10;
+  }
+  60% {
+    transform: translate(-20px, 25px) rotate(240deg);
+    opacity: 0.04;
+  }
+  90% {
+    transform: translate(15px, 10px) rotate(360deg);
+    opacity: 0.08;
+  }
+}
+
+@keyframes luxuryFloat6 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.07;
+  }
+  20% {
+    transform: translate(-15px, -25px) rotate(72deg);
+    opacity: 0.11;
+  }
+  40% {
+    transform: translate(30px, 15px) rotate(144deg);
+    opacity: 0.05;
+  }
+  60% {
+    transform: translate(-25px, 20px) rotate(216deg);
+    opacity: 0.09;
+  }
+  80% {
+    transform: translate(20px, -10px) rotate(288deg);
+    opacity: 0.06;
+  }
+}
+
+@keyframes luxuryFloat7 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.05;
+  }
+  35% {
+    transform: translate(20px, 20px) rotate(126deg);
+    opacity: 0.09;
+  }
+  70% {
+    transform: translate(-15px, -20px) rotate(252deg);
+    opacity: 0.03;
+  }
+}
+
+/* Hide on mobile for performance */
+@media (max-width: 768px) {
+  .ultraLuxuryEffects {
+    display: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .luxuryOrb1,
+  .luxuryOrb2,
+  .luxuryOrb3,
+  .luxuryRays,
+  .premiumShimmer,
+  .floatingLuxury1,
+  .floatingLuxury2,
+  .floatingLuxury3,
+  .floatingLuxury4 {
+    animation: none;
+  }
+}

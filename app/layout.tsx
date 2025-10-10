@@ -6,6 +6,7 @@ import LuxuryParticles from '@/components/LuxuryParticles'
 import LuxuryGradients from '@/components/LuxuryGradients'
 import LuxuryShadows from '@/components/LuxuryShadows'
 import LuxuryTypography from '@/components/LuxuryTypography'
+import UltraLuxuryEffects from '@/components/UltraLuxuryEffects'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -38,6 +39,7 @@ export default function RootLayout({
         <LuxuryGradients />
         <LuxuryShadows />
         <LuxuryTypography />
+        <UltraLuxuryEffects />
         {children}
       </body>
     </html>

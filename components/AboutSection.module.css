@@ -1,5 +1,5 @@
 .about {
-  padding: 160px 0 180px;
+  padding: 140px 0 160px;
   background: #ffffff;
   position: relative;
 }
@@ -13,7 +13,7 @@
 .aboutGrid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 120px;
+  gap: 100px;
   align-items: center;
 }
 
