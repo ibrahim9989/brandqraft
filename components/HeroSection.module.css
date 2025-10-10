@@ -5,7 +5,7 @@
   position: relative;
   overflow: hidden;
   background: #ffffff;
-  padding: 0 6%;
+  padding: 0 5%;
   z-index: 10;
 }
 
@@ -42,7 +42,7 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 0;
   animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -59,11 +59,11 @@
 }
 
 .heroTitle {
-  font-size: clamp(64px, 7vw, 88px);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.045em;
-  margin-bottom: 24px;
+  font-size: clamp(56px, 6.5vw, 80px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
   color: #000000;
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', 'Inter', sans-serif;
@@ -91,21 +91,21 @@
 }
 
 .heroSubtitle {
-  font-size: clamp(19px, 2vw, 22px);
+  font-size: clamp(18px, 1.8vw, 20px);
   font-weight: 400;
   color: #1d1d1f;
-  max-width: 600px;
-  margin: 0 0 40px 0;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
+  max-width: 520px;
+  margin: 0 0 48px 0;
+  line-height: 1.7;
+  letter-spacing: -0.008em;
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', 'Inter', sans-serif;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .heroCta {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -114,20 +114,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 44px;
+  padding: 16px 36px;
   background: #000000;
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 16px;
   border-radius: 980px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  letter-spacing: -0.01em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: -0.008em;
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .btnPrimary::before {
@@ -161,8 +161,8 @@
 }
 
 .btnPrimary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btnPrimary:hover::before {

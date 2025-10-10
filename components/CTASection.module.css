@@ -1,14 +1,14 @@
 .ctaSection {
-  padding: 160px 0 180px;
+  padding: 120px 0 140px;
   background: #000000;
   position: relative;
   overflow: hidden;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 6%;
+  padding: 0 5%;
 }
 
 .ctaBackground {

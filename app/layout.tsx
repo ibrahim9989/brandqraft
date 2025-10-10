@@ -2,11 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import FloatingCursor from '@/components/FloatingCursor'
-import LuxuryParticles from '@/components/LuxuryParticles'
-import LuxuryGradients from '@/components/LuxuryGradients'
-import LuxuryShadows from '@/components/LuxuryShadows'
-import LuxuryTypography from '@/components/LuxuryTypography'
-import UltraLuxuryEffects from '@/components/UltraLuxuryEffects'
+import UltraPremiumOverlay from '@/components/UltraPremiumOverlay'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -35,11 +31,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body>
         <FloatingCursor />
-        <LuxuryParticles />
-        <LuxuryGradients />
-        <LuxuryShadows />
-        <LuxuryTypography />
-        <UltraLuxuryEffects />
+        <UltraPremiumOverlay />
         {children}
       </body>
     </html>
