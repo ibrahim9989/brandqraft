@@ -1,0 +1,482 @@
+/* Work Page Styles */
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 0 6rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--grey-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Filter Section */
+.filterSection {
+  padding: 2rem 0;
+  background: var(--pure-white);
+  border-bottom: 1px solid var(--grey-light);
+}
+
+.filterTabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  background: transparent;
+  border: 2px solid var(--grey-light);
+  color: var(--charcoal);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterTab:hover,
+.filterTab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--pure-white);
+}
+
+/* Projects Section */
+.projectsSection {
+  padding: 4rem 0;
+  background: var(--off-white);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.projectCard {
+  background: var(--pure-white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--grey-light);
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.projectImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--grey-light) 0%, var(--grey-medium) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 8px;
+  opacity: 0.3;
+}
+
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+}
+
+.viewProject {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewProject:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.projectContent {
+  padding: 2rem;
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projectCategory {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.projectTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: var(--off-white);
+  color: var(--charcoal);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.projectDescription {
+  color: var(--charcoal);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.projectResults {
+  border-top: 1px solid var(--grey-light);
+  padding-top: 1.5rem;
+}
+
+.resultsTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resultItem {
+  padding: 0.25rem 0;
+  color: var(--charcoal);
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.resultItem::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+  padding: 6rem 0;
+  background: var(--pure-white);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-dark);
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: var(--off-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--grey-light);
+}
+
+.testimonialContent {
+  text-align: center;
+}
+
+.testimonialText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorInfo {
+  text-align: center;
+}
+
+.authorName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--primary-dark);
+}
+
+.authorTitle {
+  color: var(--charcoal);
+  font-size: 0.9rem;
+}
+
+/* Awards Section */
+.awardsSection {
+  padding: 6rem 0;
+  background: var(--off-white);
+}
+
+.awardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.award {
+  background: var(--pure-white);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid var(--grey-light);
+}
+
+.award:hover {
+  transform: translateY(-3px);
+}
+
+.awardIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.awardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.awardOrganization {
+  color: var(--charcoal);
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  background: var(--primary-dark);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+}
+
+.ctaSubtitle {
+  font-size: 1.25rem;
+  color: var(--grey-light);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryButton:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  border: 2px solid var(--pure-white);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background: var(--pure-white);
+  color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+  
+  .filterTabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .filterTab {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .projectMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .awardsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}

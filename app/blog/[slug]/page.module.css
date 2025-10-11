@@ -1,0 +1,478 @@
+/* Blog Post Page Styles */
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--grey-light);
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: var(--grey-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.date,
+.readTime {
+  color: var(--grey-light);
+  font-size: 0.9rem;
+}
+
+.articleTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+}
+
+.articleExcerpt {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--grey-light);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.authorAvatar {
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.authorDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--pure-white);
+  font-size: 1rem;
+}
+
+.authorTitle {
+  color: var(--grey-light);
+  font-size: 0.9rem;
+}
+
+/* Image Section */
+.imageSection {
+  padding: 2rem 0;
+  background: var(--pure-white);
+}
+
+.articleImage {
+  text-align: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--grey-light) 0%, var(--grey-medium) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imagePlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 8px;
+  opacity: 0.3;
+}
+
+/* Content Section */
+.contentSection {
+  padding: 4rem 0;
+  background: var(--pure-white);
+}
+
+.contentWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.articleContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: 3rem;
+}
+
+.articleContent h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1.5rem 0;
+  color: var(--primary-dark);
+}
+
+.articleContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  color: var(--primary-dark);
+}
+
+.articleContent p {
+  margin-bottom: 1.5rem;
+}
+
+.articleContent ul,
+.articleContent ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.articleContent li {
+  margin-bottom: 0.5rem;
+}
+
+.articleContent blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--charcoal);
+}
+
+.articleContent code {
+  background: var(--off-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.9rem;
+}
+
+.articleContent pre {
+  background: var(--off-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.articleContent pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Tags Section */
+.tagsSection {
+  border-top: 1px solid var(--grey-light);
+  padding-top: 2rem;
+}
+
+.tagsSection h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--off-white);
+  color: var(--charcoal);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--grey-light);
+}
+
+/* Related Section */
+.relatedSection {
+  padding: 4rem 0;
+  background: var(--off-white);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-dark);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.relatedCard {
+  background: var(--pure-white);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--grey-light);
+}
+
+.relatedCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.relatedImage {
+  height: 200px;
+  overflow: hidden;
+}
+
+.relatedContent {
+  padding: 1.5rem;
+}
+
+.relatedTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.relatedTitle a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.relatedTitle a:hover {
+  color: var(--accent);
+}
+
+.relatedExcerpt {
+  color: var(--charcoal);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  padding: 4rem 0;
+  background: var(--primary-dark);
+  text-align: center;
+}
+
+.newsletterContent {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletterTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--pure-white);
+}
+
+.newsletterSubtitle {
+  color: var(--grey-light);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.newsletterForm {
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid var(--grey-dark);
+  border-radius: 8px;
+  background: var(--pure-white);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.subscribeButton {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.subscribeButton:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Not Found */
+.notFound {
+  padding: 8rem 0;
+  text-align: center;
+  background: var(--pure-white);
+}
+
+.notFound h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.notFound p {
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+}
+
+.backLink {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--accent-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  .articleMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .authorInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .authorDetails {
+    text-align: center;
+  }
+  
+  .articleContent {
+    font-size: 1rem;
+  }
+  
+  .articleContent h2 {
+    font-size: 1.5rem;
+  }
+  
+  .articleContent h3 {
+    font-size: 1.25rem;
+  }
+  
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formGroup {
+    flex-direction: column;
+  }
+  
+  .subscribeButton {
+    width: 100%;
+  }
+}

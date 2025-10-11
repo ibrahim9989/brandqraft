@@ -1,0 +1,352 @@
+/* About Page Styles */
+.main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 0 6rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+}
+
+.accent {
+  color: var(--accent);
+  position: relative;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--grey-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Story Section */
+.storySection {
+  padding: 6rem 0;
+  background: var(--pure-white);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.storyContent {
+  max-width: 500px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.storyText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.storyVisual {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visualElement {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border-radius: 50%;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.visualElement::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.05); opacity: 0.1; }
+}
+
+/* Values Section */
+.valuesSection {
+  padding: 6rem 0;
+  background: var(--off-white);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background: var(--pure-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--grey-light);
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.valueIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--pure-white);
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.valueDescription {
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* Team Section */
+.teamSection {
+  padding: 6rem 0;
+  background: var(--pure-white);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.memberImage {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--grey-light) 0%, var(--grey-medium) 100%);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.memberImage::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.memberRole {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.memberBio {
+  color: var(--charcoal);
+  line-height: 1.6;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 6rem 0;
+  background: var(--primary-dark);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--pure-white);
+}
+
+.ctaSubtitle {
+  font-size: 1.25rem;
+  color: var(--grey-light);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryButton:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--pure-white);
+  padding: 1rem 2rem;
+  border: 2px solid var(--pure-white);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background: var(--pure-white);
+  color: var(--primary-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+  
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .storyVisual {
+    height: 250px;
+  }
+  
+  .visualElement {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
