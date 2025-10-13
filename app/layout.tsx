@@ -22,6 +22,24 @@ export const metadata: Metadata = {
   },
 }
 
+function ThemeScript() {
+  // Inline script string to avoid FOUC
+  const script = `(() => {
+    try {
+      const stored = localStorage.getItem('theme');
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      const preferred = mql.matches ? 'dark' : 'light';
+      const theme = stored === 'light' || stored === 'dark' ? stored : preferred;
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch {
+      // default to system preference
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      document.documentElement.setAttribute('data-theme', mql.matches ? 'dark' : 'light');
+    }
+  })();`;
+  return <script dangerouslySetInnerHTML={{ __html: script }} />
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -29,6 +47,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <FloatingCursor />
         <UltraPremiumOverlay />

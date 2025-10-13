@@ -5,6 +5,13 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
+        <div style={{ position: 'relative', marginBottom: 24 }}>
+          <img
+            src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1400&auto=format&fit=crop"
+            alt="Subtle texture"
+            style={{ width: '100%', height: 160, objectFit: 'cover', borderRadius: 24, opacity: 0.06 }}
+          />
+        </div>
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
             <div className={styles.footerLogo}>BrandQraft</div>

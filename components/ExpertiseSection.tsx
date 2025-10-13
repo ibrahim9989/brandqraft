@@ -32,17 +32,20 @@ export default function ExpertiseSection() {
     {
       title: 'Brand Identity & Strategy',
       description: 'Comprehensive brand systems that define positioning, visual identity, and voice—built to scale from day one.',
-      number: '01'
+      number: '01',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: 'Digital Product Design',
       description: 'UI/UX design for web and mobile that balances beauty with usability—intuitive experiences users love.',
-      number: '02'
+      number: '02',
+      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop'
     },
     {
       title: 'Creative Campaigns',
       description: 'Go-to-market campaigns that break through noise—strategic storytelling that drives awareness and action.',
-      number: '03'
+      number: '03',
+      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop'
     }
   ]
 
@@ -59,6 +62,11 @@ export default function ExpertiseSection() {
               className={styles.serviceCard}
               ref={(el) => { cardsRef.current[index] = el }}
             >
+              <img
+                src={service.image}
+                alt={service.title}
+                style={{ width: '100%', height: 180, objectFit: 'cover', borderRadius: 16, marginBottom: 24 }}
+              />
               <div className={styles.serviceNumber}>{service.number}</div>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>

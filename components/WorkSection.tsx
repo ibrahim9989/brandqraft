@@ -43,17 +43,13 @@ export default function WorkSection() {
         <div className={styles.featuredWork} ref={featuredRef}>
           <div className={styles.projectVisual}>
             <div className={styles.projectFrame}>
-              <div className={styles.projectPlaceholder}>
-                <div className={styles.placeholderContent}>
-                  <div className={styles.placeholderIcon}>
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" strokeWidth="1.5"/>
-                      <path d="M16 24L22 30L32 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <span>Featured Work</span>
-                </div>
-              </div>
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1400&auto=format&fit=crop"
+                alt="Featured case study preview"
+                className={styles.projectImage}
+              />
+              <div className={styles.projectOverlay}></div>
+              <div className={styles.projectLabel}>Featured Work</div>
             </div>
           </div>
           <div className={styles.projectInfo}>

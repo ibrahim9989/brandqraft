@@ -34,7 +34,7 @@ export default function AboutSection() {
           <div className={styles.aboutText} ref={textRef}>
             <h2 className={styles.sectionTitle}>Where Vision Meets Precision.</h2>
             <p className={styles.aboutDescription}>
-              BrandQraft is where strategic thinking meets creative excellence. We don&apos;t just design brands—we architect business identities that resonate, convert, and endure.
+              BrandQraft is where strategic thinking meets creative excellence. We don\'t just design brands—we architect business identities that resonate, convert, and endure.
             </p>
             <p className={styles.aboutDescription}>
               From startups to scale-ups, we partner with ambitious teams to craft cohesive brand experiences that drive measurable growth.
@@ -45,6 +45,11 @@ export default function AboutSection() {
           </div>
           <div className={styles.aboutVisual} ref={visualRef}>
             <div className={styles.visualContainer}>
+              <img
+                src="https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1000&auto=format&fit=crop"
+                alt="Creative workspace desk"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: 24 }}
+              />
               <div className={styles.gradientBlock}>
                 <div className={styles.brandShowcase}>
                   <div className={styles.showcaseItem}>Brand Strategy</div>

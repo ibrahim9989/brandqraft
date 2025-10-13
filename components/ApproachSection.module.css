@@ -1,6 +1,6 @@
 .approach {
   padding: 120px 0 140px;
-  background: #ffffff;
+  background: var(--bg);
   position: relative;
 }
 
@@ -16,7 +16,7 @@
   line-height: 1.0;
   letter-spacing: -0.055em;
   margin-bottom: 100px;
-  color: #000000;
+  color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
   text-align: center;
   opacity: 0;
@@ -62,7 +62,7 @@
 .stepNumber {
   font-size: 64px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.15);
+  color: var(--text-muted);
   transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
   letter-spacing: -0.05em;
@@ -70,7 +70,7 @@
 }
 
 .approachStep:hover .stepNumber {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--text-secondary);
   transform: scale(1.05);
 }
 
@@ -86,7 +86,7 @@
   line-height: 1.2;
   letter-spacing: -0.03em;
   margin-bottom: 8px;
-  color: #000000;
+  color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
   transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
@@ -98,8 +98,8 @@
 .stepDescription {
   font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.6;
-  color: #1d1d1f;
-  opacity: 0.75;
+  color: var(--text-secondary);
+  opacity: 0.9;
   font-weight: 400;
   letter-spacing: -0.015em;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -107,7 +107,7 @@
 }
 
 .approachStep:hover .stepDescription {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .approachConnector {

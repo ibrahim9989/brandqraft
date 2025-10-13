@@ -32,6 +32,11 @@ export default function HeroSection() {
   return (
     <section className={styles.hero} id="hero" ref={heroRef}>
       <div className={styles.heroBackground}>
+        <img
+          src="https://images.unsplash.com/photo-1529336953121-c821f1d02c4c?q=80&w=1600&auto=format&fit=crop"
+          alt="Abstract premium brand background"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+        />
         <div className={styles.gradientOverlay} ref={gradientRef}></div>
       </div>
       <div className={styles.heroContent} ref={contentRef}>

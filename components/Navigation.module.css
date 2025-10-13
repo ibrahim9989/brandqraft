@@ -3,19 +3,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   z-index: 1000;
   padding: 12px 0;
   transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 0.5px solid var(--nav-border);
 }
 
 .navbar.scrolled {
   padding: 8px 0;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
-  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 0.5px solid var(--nav-border);
+  background: var(--nav-bg-scrolled);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -65,7 +65,7 @@
 
 .navMenu a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--nav-link);
   font-weight: 400;
   font-size: 12px;
   transition: opacity 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
@@ -88,7 +88,7 @@
 .searchButton {
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--nav-icon);
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
@@ -99,7 +99,7 @@
 }
 
 .searchButton:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--nav-hover-bg);
   transform: scale(1.05);
 }
 
@@ -129,7 +129,7 @@
   left: 0;
   width: 0%;
   height: 1px;
-  background: #000000;
+  background: var(--nav-underline);
   transition: width 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
@@ -184,13 +184,13 @@
 }
 
 .hamburger:hover {
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--nav-hamburger-hover-bg);
 }
 
 .hamburger span {
   width: 18px;
   height: 1.5px;
-  background: #000000;
+  background: var(--nav-hamburger-bar);
   transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
   border-radius: 2px;
 }
@@ -223,7 +223,7 @@
     left: 0;
     top: 60px;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.96);
+    background: var(--nav-mobile-bg);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     width: 100%;
@@ -231,7 +231,7 @@
     padding: 32px 0;
     gap: 0;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-top: 0.5px solid var(--nav-border);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px);
@@ -247,7 +247,7 @@
   .navMenu li {
     width: 100%;
     padding: 0;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+    border-bottom: 0.5px solid var(--nav-mobile-divider);
   }
 
   .navMenu li:last-child {
@@ -259,7 +259,7 @@
     padding: 16px 24px;
     font-size: 16px;
     width: 100%;
-    color: #ffffff;
+    color: var(--nav-link);
   }
 
   .navActions {
