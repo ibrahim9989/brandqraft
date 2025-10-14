@@ -52,7 +52,7 @@
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -60,8 +60,8 @@
 /* Filter Section */
 .filterSection {
   padding: 2rem 0;
-  background: var(--pure-white);
-  border-bottom: 1px solid var(--grey-light);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .filterTabs {
@@ -73,8 +73,8 @@
 
 .filterTab {
   background: transparent;
-  border: 2px solid var(--grey-light);
-  color: var(--charcoal);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-weight: 500;
@@ -92,7 +92,7 @@
 /* Featured Section */
 .featuredSection {
   padding: 4rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .featuredLabel {
@@ -106,13 +106,14 @@
 }
 
 .featuredPost {
-  background: var(--pure-white);
+  background: var(--surface-1);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 400px;
+  border: 1px solid var(--border-color);
 }
 
 .featuredImage {
@@ -167,7 +168,7 @@
 }
 
 .postDate {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -179,7 +180,7 @@
 }
 
 .featuredTitle a {
-  color: var(--primary-dark);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -189,7 +190,7 @@
 }
 
 .featuredExcerpt {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 2rem;
   font-size: 1.1rem;
@@ -222,12 +223,12 @@
 
 .authorName {
   font-weight: 600;
-  color: var(--primary-dark);
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
 .readTime {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.8rem;
 }
 
@@ -245,7 +246,7 @@
 /* Posts Section */
 .postsSection {
   padding: 4rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .sectionTitle {
@@ -253,7 +254,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .postsGrid {
@@ -263,11 +264,11 @@
 }
 
 .postCard {
-  background: var(--off-white);
+  background: var(--surface-1);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .postCard:hover {
@@ -292,7 +293,7 @@
 }
 
 .postTitle a {
-  color: var(--primary-dark);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -302,13 +303,13 @@
 }
 
 .postExcerpt {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .postFooter {
-  border-top: 1px solid var(--grey-light);
+  border-top: 1px solid var(--border-color);
   padding-top: 1rem;
 }
 
@@ -332,7 +333,7 @@
 }
 
 .newsletterSubtitle {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -388,7 +389,7 @@
 /* Topics Section */
 .topicsSection {
   padding: 4rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .topicsGrid {
@@ -399,12 +400,12 @@
 }
 
 .topicCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .topicCard:hover {
@@ -427,11 +428,11 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .topicDescription {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }

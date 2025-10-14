@@ -52,7 +52,7 @@
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -60,8 +60,8 @@
 /* Filter Section */
 .filterSection {
   padding: 2rem 0;
-  background: var(--pure-white);
-  border-bottom: 1px solid var(--grey-light);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .filterTabs {
@@ -73,8 +73,8 @@
 
 .filterTab {
   background: transparent;
-  border: 2px solid var(--grey-light);
-  color: var(--charcoal);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   font-weight: 500;
@@ -92,7 +92,7 @@
 /* Projects Section */
 .projectsSection {
   padding: 4rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .projectsGrid {
@@ -102,11 +102,11 @@
 }
 
 .projectCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .projectCard:hover {
@@ -204,7 +204,7 @@
 
 .tag {
   background: var(--off-white);
-  color: var(--charcoal);
+  color: var(--text-secondary);
   padding: 0.25rem 0.5rem;
   border-radius: 8px;
   font-size: 0.75rem;
@@ -215,17 +215,17 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .projectDescription {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .projectResults {
-  border-top: 1px solid var(--grey-light);
+  border-top: 1px solid var(--border-color);
   padding-top: 1.5rem;
 }
 
@@ -233,7 +233,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .resultsList {
@@ -244,7 +244,7 @@
 
 .resultItem {
   padding: 0.25rem 0;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   position: relative;
   padding-left: 1rem;
@@ -261,7 +261,7 @@
 /* Testimonials Section */
 .testimonialsSection {
   padding: 6rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .sectionTitle {
@@ -269,7 +269,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .testimonialsGrid {
@@ -279,10 +279,10 @@
 }
 
 .testimonial {
-  background: var(--off-white);
+  background: var(--surface-1);
   padding: 2.5rem;
   border-radius: 12px;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .testimonialContent {
@@ -292,7 +292,7 @@
 .testimonialText {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   font-style: italic;
 }
@@ -311,18 +311,18 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .authorTitle {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 /* Awards Section */
 .awardsSection {
   padding: 6rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .awardsGrid {
@@ -333,12 +333,12 @@
 }
 
 .award {
-  background: var(--pure-white);
+  background: var(--surface-1);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .award:hover {
@@ -354,11 +354,11 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .awardOrganization {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -383,7 +383,7 @@
 
 .ctaSubtitle {
   font-size: 1.25rem;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }

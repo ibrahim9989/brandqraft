@@ -40,12 +40,12 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .breadcrumb a {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -71,7 +71,7 @@
 }
 
 .timeline {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -86,13 +86,13 @@
 .heroDescription {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--grey-light);
+  color: var(--text-secondary);
 }
 
 /* Images Section */
 .imagesSection {
   padding: 4rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .imagesGrid {
@@ -130,7 +130,7 @@
 }
 
 .imageCaption {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   font-style: italic;
 }
@@ -138,7 +138,7 @@
 /* Challenge Section */
 .challengeSection {
   padding: 6rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .challengeGrid {
@@ -151,20 +151,20 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .challengeText,
 .solutionText {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--charcoal);
+  color: var(--text-secondary);
 }
 
 /* Results Section */
 .resultsSection {
   padding: 6rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .resultsGrid {
@@ -175,11 +175,11 @@
 }
 
 .resultCard {
-  background: var(--off-white);
+  background: var(--surface-1);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
   position: relative;
 }
 
@@ -198,7 +198,7 @@
 }
 
 .resultText {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   font-weight: 500;
 }
@@ -206,7 +206,7 @@
 /* Details Section */
 .detailsSection {
   padding: 6rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .detailsGrid {
@@ -217,21 +217,21 @@
 }
 
 .detailCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .detailTitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .detailValue {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -244,8 +244,8 @@
 
 .detailItem {
   padding: 0.5rem 0;
-  color: var(--charcoal);
-  border-bottom: 1px solid var(--grey-light);
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .detailItem:last-child {
@@ -288,7 +288,7 @@
 
 .ctaSubtitle {
   font-size: 1.25rem;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -337,17 +337,17 @@
 .notFound {
   padding: 8rem 0;
   text-align: center;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .notFound h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .notFound p {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 

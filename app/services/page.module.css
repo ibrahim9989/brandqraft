@@ -52,7 +52,7 @@
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -60,7 +60,7 @@
 /* Services Overview */
 .servicesOverview {
   padding: 6rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .overviewGrid {
@@ -78,13 +78,13 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .overviewText {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
@@ -107,7 +107,7 @@
 
 .statLabel {
   font-size: 0.9rem;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -146,7 +146,7 @@
 
 .stepLabel {
   font-size: 0.9rem;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -159,7 +159,7 @@
 /* Detailed Services */
 .detailedServices {
   padding: 6rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .servicesGrid {
@@ -170,11 +170,11 @@
 }
 
 .serviceCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   padding: 2.5rem;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
   position: relative;
 }
 
@@ -199,11 +199,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .serviceDescription {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -216,7 +216,7 @@
 
 .serviceFeatures li {
   padding: 0.5rem 0;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   position: relative;
   padding-left: 1.5rem;
 }
@@ -244,7 +244,7 @@
 /* Process Section */
 .processSection {
   padding: 6rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .processGrid {
@@ -272,18 +272,18 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .stepDescription {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 .stepDuration {
   background: var(--off-white);
-  color: var(--charcoal);
+  color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -294,7 +294,7 @@
 /* Industries Section */
 .industriesSection {
   padding: 6rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .industriesGrid {
@@ -305,11 +305,11 @@
 }
 
 .industryCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   padding: 2rem;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .industryCard:hover {
@@ -320,11 +320,11 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .industryDescription {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -349,7 +349,7 @@
 
 .ctaSubtitle {
   font-size: 1.25rem;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }

@@ -41,12 +41,12 @@
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .breadcrumb a {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -75,7 +75,7 @@
 
 .date,
 .readTime {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
@@ -90,7 +90,7 @@
 .articleExcerpt {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
@@ -125,14 +125,14 @@
 }
 
 .authorTitle {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 /* Image Section */
 .imageSection {
   padding: 2rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .articleImage {
@@ -166,7 +166,7 @@
 /* Content Section */
 .contentSection {
   padding: 4rem 0;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .contentWrapper {
@@ -177,7 +177,7 @@
 .articleContent {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--charcoal);
+  color: var(--text-secondary);
   margin-bottom: 3rem;
 }
 
@@ -185,14 +185,14 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin: 2.5rem 0 1.5rem 0;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .articleContent h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 2rem 0 1rem 0;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .articleContent p {
@@ -214,7 +214,7 @@
   padding-left: 1.5rem;
   margin: 2rem 0;
   font-style: italic;
-  color: var(--charcoal);
+  color: var(--text-secondary);
 }
 
 .articleContent code {
@@ -240,7 +240,7 @@
 
 /* Tags Section */
 .tagsSection {
-  border-top: 1px solid var(--grey-light);
+  border-top: 1px solid var(--border-color);
   padding-top: 2rem;
 }
 
@@ -248,7 +248,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .tags {
@@ -259,18 +259,18 @@
 
 .tag {
   background: var(--off-white);
-  color: var(--charcoal);
+  color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 /* Related Section */
 .relatedSection {
   padding: 4rem 0;
-  background: var(--off-white);
+  background: var(--bg);
 }
 
 .sectionTitle {
@@ -278,7 +278,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .relatedGrid {
@@ -288,11 +288,11 @@
 }
 
 .relatedCard {
-  background: var(--pure-white);
+  background: var(--surface-1);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--border-color);
 }
 
 .relatedCard:hover {
@@ -317,7 +317,7 @@
 }
 
 .relatedTitle a {
-  color: var(--primary-dark);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -327,7 +327,7 @@
 }
 
 .relatedExcerpt {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   line-height: 1.6;
   font-size: 0.95rem;
 }
@@ -352,7 +352,7 @@
 }
 
 .newsletterSubtitle {
-  color: var(--grey-light);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -403,17 +403,17 @@
 .notFound {
   padding: 8rem 0;
   text-align: center;
-  background: var(--pure-white);
+  background: var(--bg);
 }
 
 .notFound h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-dark);
+  color: var(--text-primary);
 }
 
 .notFound p {
-  color: var(--charcoal);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
