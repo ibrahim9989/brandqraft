@@ -10,8 +10,8 @@
 
 :root {
   /* Color Palette - Monochrome + Accent */
-  --primary-dark: #0a0a0a;
-  --secondary-dark: #1a1a1a;
+  --primary-dark: #093542;
+  --secondary-dark: #0a2530;
   --charcoal: #2a2a2a;
   --grey-dark: #666666;
   --grey-medium: #999999;
@@ -20,9 +20,9 @@
   --pure-white: #ffffff;
   
   /* Accent Color - Royal Blue */
-  --accent: #2563eb;
-  --accent-dark: #1e40af;
-  --accent-light: #3b82f6;
+  --accent: #b8a07c;
+  --accent-dark: #8f815f;
+  --accent-light: #d6c3a5;
   
   /* Semantic Theme Tokens (Light default) */
   --bg: var(--pure-white);
@@ -60,6 +60,22 @@
   /* Spacing */
   --section-padding: 120px;
   --container-width: 1200px;
+
+  /* Typography */
+  --font-family-sans: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* Type Scale */
+  --fs-display: clamp(40px, 6vw, 80px);
+  --fs-title: clamp(32px, 4.5vw, 56px);
+  --fs-heading-1: 32px;
+  --fs-heading-2: 24px;
+  --fs-heading-3: 20px;
+  --fs-subtitle: 18px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-caption: 14px;
   
   /* Animation */
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,16 +121,56 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-family-sans);
   color: var(--text-primary);
   background-color: var(--bg);
   line-height: 1.7;
-  font-size: 16px;
+  font-size: var(--fs-body);
+  font-weight: var(--font-weight-regular); /* Regular body */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
+
+/* Global heading defaults — semibold; sizes mapped to tokens */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-sans) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Element-to-scale mapping */
+h1 { font-size: var(--fs-title); }
+h2 { font-size: var(--fs-heading-1); }
+h3 { font-size: var(--fs-heading-2); }
+h4 { font-size: var(--fs-heading-3); }
+h5 { font-size: var(--fs-subtitle); font-weight: var(--font-weight-regular); }
+h6 { font-size: var(--fs-caption); font-weight: var(--font-weight-regular); letter-spacing: 0; }
+
+/* Enforce Myriad Pro across common text elements to ensure consistency
+   Module styles may set other stacks; we override with !important for uniformity */
+p, a, li, span, small, button, input, select, textarea, label, div {
+  font-family: var(--font-family-sans) !important;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Force Myriad across modules that set their own stacks (exclude code blocks) */
+:where(body) :not(code, pre, kbd, samp, .monospace, svg, svg *) {
+  font-family: var(--font-family-sans) !important;
+}
+
+/* Utility classes */
+.type-display    { font-size: var(--fs-display);    font-weight: var(--font-weight-semibold); line-height: 1.1; letter-spacing: -0.02em; }
+.type-title      { font-size: var(--fs-title);      font-weight: var(--font-weight-semibold); line-height: 1.1; letter-spacing: -0.02em; }
+.type-heading-1  { font-size: var(--fs-heading-1);  font-weight: var(--font-weight-semibold); }
+.type-heading-2  { font-size: var(--fs-heading-2);  font-weight: var(--font-weight-semibold); }
+.type-heading-3  { font-size: var(--fs-heading-3);  font-weight: var(--font-weight-semibold); }
+.type-subtitle   { font-size: var(--fs-subtitle);   font-weight: var(--font-weight-regular); line-height: 1.5; }
+.type-body-lg    { font-size: var(--fs-body-lg);    font-weight: var(--font-weight-regular); line-height: 1.7; }
+.type-body       { font-size: var(--fs-body);       font-weight: var(--font-weight-regular); line-height: 1.7; }
+.type-caption    { font-size: var(--fs-caption);    font-weight: var(--font-weight-regular); line-height: 1.5; opacity: 0.8; }
 
 /* Ultra-Premium Selection Styles */
 ::selection {

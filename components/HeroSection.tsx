@@ -41,10 +41,12 @@ export default function HeroSection() {
       </div>
       <div className={styles.heroContent} ref={contentRef}>
         <h1 className={styles.heroTitle}>
-          We Craft Brands<br />That Build Businesses.
+          Turning Ideas<br />Into Thriving Brands.
         </h1>
         <p className={styles.heroSubtitle}>
-          Strategic branding and product development for visionaries who refuse to blend in.
+          We provide end-to-end branding, digital marketing, and business scaling solutions.
+          Creative expertise meets data-driven strategy—so ambitious founders achieve sustainable,
+          measurable growth.
         </p>
         <div className={styles.heroCta}>
           <Link href="#contact" className={styles.btnPrimary} data-cursor-hover>

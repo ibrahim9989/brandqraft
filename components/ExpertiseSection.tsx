@@ -30,22 +30,28 @@ export default function ExpertiseSection() {
 
   const services = [
     {
-      title: 'Brand Identity & Strategy',
-      description: 'Comprehensive brand systems that define positioning, visual identity, and voice—built to scale from day one.',
+      title: 'Branding',
+      description: 'Brand naming, logo design, visual identity, typeface, color palette, patterns, stationery, mockups, PPT templates, and brochure/profile design.',
       number: '01',
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800&auto=format&fit=crop'
     },
     {
-      title: 'Digital Product Design',
-      description: 'UI/UX design for web and mobile that balances beauty with usability—intuitive experiences users love.',
+      title: 'Digital Marketing Management',
+      description: 'Marketing brief, quarterly plan, monthly social content calendar, creatives, performance marketing, analytics and reporting.',
       number: '02',
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop'
     },
     {
-      title: 'Creative Campaigns',
-      description: 'Go-to-market campaigns that break through noise—strategic storytelling that drives awareness and action.',
+      title: 'Website Development',
+      description: 'Domain and hosting purchase, website UI design, development, and SEO for scalable growth.',
       number: '03',
       image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop'
+    },
+    {
+      title: 'Business Scaling',
+      description: 'Sales funnels and lead generation, CRM setup and management, process design, tech adoption, and data analytics with insights.',
+      number: '04',
+      image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop'
     }
   ]
 

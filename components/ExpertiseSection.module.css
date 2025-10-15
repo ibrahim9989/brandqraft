@@ -5,19 +5,19 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 40px;
 }
 
 .sectionTitle {
   font-size: clamp(36px, 4.5vw, 56px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.04em;
   margin-bottom: 64px;
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   text-align: center;
   opacity: 0;
   transform: translateY(50px);
@@ -31,13 +31,13 @@
 
 .expertiseGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px;
 }
 
 .serviceCard {
   background: var(--surface-1);
-  padding: 60px 48px;
+  padding: 48px 40px;
   border-radius: 20px;
   border: 0.5px solid var(--border-color);
   transition: all 0.6s cubic-bezier(0.28, 0.11, 0.32, 1);
@@ -82,11 +82,9 @@
 }
 
 .serviceCard:hover {
-  transform: translateY(-12px);
+  transform: translateY(-6px);
   border-color: var(--border-color);
-  box-shadow: 
-    0 40px 100px rgba(0, 0, 0, 0.12),
-    0 0 0 0.5px rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
 .serviceCard:hover::before {
@@ -115,7 +113,7 @@
   letter-spacing: -0.03em;
   margin-bottom: 20px;
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
@@ -195,7 +193,7 @@
   }
 
   .expertiseGrid {
-    gap: 40px;
+    gap: 48px;
   }
 }
 

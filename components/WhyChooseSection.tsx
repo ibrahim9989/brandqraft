@@ -30,23 +30,23 @@ export default function WhyChooseSection() {
 
   const highlights = [
     {
-      title: 'Strategy-Led Creativity',
-      description: 'Every design decision backed by business objectives',
+      title: 'Holistic & Integrated',
+      description: 'Branding, digital marketing, and scaling—seamlessly connected under one roof',
       number: '01'
     },
     {
-      title: 'End-to-End Execution',
-      description: 'From concept to launch, we handle every detail',
+      title: 'Reliability & Delivery',
+      description: 'Clear plans, consistent communication, and on-time outcomes you can trust',
       number: '02'
     },
     {
-      title: 'Agile & Responsive',
-      description: 'Fast turnarounds without compromising quality',
+      title: 'Efficiency & Quality',
+      description: 'Lean, focused teams producing premium work without the agency overhead',
       number: '03'
     },
     {
-      title: 'Built to Scale',
-      description: 'Systems designed to grow with your business',
+      title: 'Built for Sustainable Growth',
+      description: 'Systems, data, and processes designed for long-term, compounding results',
       number: '04'
     }
   ]
@@ -57,10 +57,10 @@ export default function WhyChooseSection() {
         <div className={styles.whyGrid}>
           <div className={styles.whyText}>
             <h2 className={styles.sectionTitle} ref={titleRef}>
-              Not Just an Agency — a Growth Partner.
+              Why Choose Brandqraft?
             </h2>
             <p className={styles.whyDescription}>
-              We bring the strategic rigor of a consultancy and the creative excellence of a design studio—without the overhead or ego.
+              We act as your strategic growth partner—combining branding, digital marketing, and business scaling to build lasting brands and sustainable growth.
             </p>
           </div>
           <div className={styles.whyHighlights}>

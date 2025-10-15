@@ -32,15 +32,24 @@ export default function AboutSection() {
       <div className={styles.container}>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutText} ref={textRef}>
-            <h2 className={styles.sectionTitle}>Where Vision Meets Precision.</h2>
+            <h2 className={styles.sectionTitle}>About Brandqraft</h2>
             <p className={styles.aboutDescription}>
-              BrandQraft is where strategic thinking meets creative excellence. We don\'t just design brands—we architect business identities that resonate, convert, and endure.
+              We turn innovative ideas into successful brands. Our end-to-end practice blends creative craft with data-driven strategy across branding, digital marketing, and business scaling.
             </p>
             <p className={styles.aboutDescription}>
-              From startups to scale-ups, we partner with ambitious teams to craft cohesive brand experiences that drive measurable growth.
+              We believe business success is a possibility for everyone—and we build systems that make it a reality.
+            </p>
+            <p className={styles.aboutDescription}>
+              <strong>Vision:</strong> Make business success a strategic, simplified reality for every ambitious entrepreneur.
+            </p>
+            <p className={styles.aboutDescription}>
+              <strong>Mission:</strong> Empower entrepreneurs with lifecycle solutions—from ideation to sustainable, autopilot growth.
+            </p>
+            <p className={styles.aboutDescription}>
+              <strong>Values:</strong> Problem Solving, Artistic Approach, Simplicity & Minimalism, Integrity, Trust.
             </p>
             <Link href="#contact" className={styles.ctaLink} data-cursor-hover>
-              Learn More About Us →
+              Talk to Us →
             </Link>
           </div>
           <div className={styles.aboutVisual} ref={visualRef}>

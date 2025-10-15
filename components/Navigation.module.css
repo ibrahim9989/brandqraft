@@ -20,9 +20,9 @@
 }
 
 .navContainer {
-  max-width: 1000px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,7 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
   cursor: pointer;
+  margin-left: -290px; /* align with hero text edge */
 }
 
 .logoImage {
@@ -51,11 +52,11 @@
 .navMenu {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 36px;
   align-items: center;
   margin: 0;
   position: absolute;
-  left: 50%;
+  left: 49.5%;
   transform: translateX(-50%);
 }
 
@@ -82,7 +83,7 @@
 .navActions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .searchButton {
@@ -104,8 +105,8 @@
 }
 
 .ctaButton {
-  background: #007AFF;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--pure-white);
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 20px;
@@ -117,7 +118,7 @@
 }
 
 .ctaButton:hover {
-  background: #0056CC;
+  background: var(--accent-dark);
   transform: scale(1.05);
 }
 

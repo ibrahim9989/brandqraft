@@ -52,7 +52,7 @@
 .heroSubtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
   margin: 0 auto;
 }

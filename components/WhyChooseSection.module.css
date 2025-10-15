@@ -29,7 +29,7 @@
   line-height: 1.0;
   letter-spacing: -0.055em;
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -46,7 +46,7 @@
   color: var(--text-secondary);
   font-weight: 400;
   letter-spacing: -0.02em;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .whyHighlights {
@@ -134,7 +134,7 @@
   line-height: 1.2;
   letter-spacing: -0.025em;
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
@@ -149,7 +149,7 @@
   opacity: 0.9;
   font-weight: 400;
   letter-spacing: -0.015em;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
 }
 
