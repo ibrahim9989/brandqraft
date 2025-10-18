@@ -34,7 +34,7 @@
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
   cursor: pointer;
-  margin-left: -290px; /* align with hero text edge */
+  margin-left: -115px; /* align with hero text edge */
 }
 
 .logoImage {

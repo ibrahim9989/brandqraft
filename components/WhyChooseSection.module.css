@@ -20,7 +20,7 @@
 .whyText {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px; /* reduce vertical stack for long paragraph */
 }
 
 .sectionTitle {
@@ -42,11 +42,12 @@
 
 .whyDescription {
   font-size: clamp(19px, 1.8vw, 22px);
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-secondary);
   font-weight: 400;
   letter-spacing: -0.02em;
   font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  max-width: 640px; /* limit measure for readability */
 }
 
 .whyHighlights {

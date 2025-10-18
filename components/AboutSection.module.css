@@ -5,15 +5,15 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 40px;
 }
 
 .aboutGrid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
 }
 
@@ -22,7 +22,7 @@
   opacity: 0;
   transform: translateY(60px);
   transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-  max-width: 720px;
+  max-width: 640px; /* comfortable measure for readability */
 }
 
 .aboutText.visible {
@@ -44,7 +44,7 @@
   font-size: clamp(20px, 2vw, 24px);
   line-height: 1.5;
   color: var(--text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 24px; /* tighter rhythm to avoid tall stacks */
   font-weight: 400;
   letter-spacing: -0.02em;
   font-family: 'Myriad Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -293,7 +293,8 @@
 
 @media (max-width: 1024px) {
   .aboutGrid {
-    gap: 80px;
+    grid-template-columns: 1fr;
+    gap: 72px;
   }
 
   .sectionTitle {

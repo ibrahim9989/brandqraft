@@ -77,73 +77,63 @@ export default function Services() {
         {/* Detailed Services */}
         <section className={styles.detailedServices}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>What We Do</h2>
+            <h2 className={styles.sectionTitle}>Our Services</h2>
             <div className={styles.servicesGrid}>
-              {/* Brand Identity & Strategy */}
+              {/* Branding */}
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}>
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className={styles.serviceTitle}>Brand Identity & Strategy</h3>
-                <p className={styles.serviceDescription}>
-                  Comprehensive brand strategy that defines your unique position in the market and creates a cohesive visual identity system.
-                </p>
+                <div className={styles.serviceIcon}></div>
+                <h3 className={styles.serviceTitle}>Branding</h3>
                 <ul className={styles.serviceFeatures}>
-                  <li>Brand Strategy & Positioning</li>
-                  <li>Visual Identity Design</li>
-                  <li>Brand Guidelines</li>
-                  <li>Logo & Mark Development</li>
-                  <li>Brand Architecture</li>
+                  <li>Brand naming</li>
+                  <li>Logo design</li>
+                  <li>Visual identity development</li>
+                  <li>Type-Face</li>
+                  <li>Color Palette</li>
+                  <li>Pattern and Graphical Elements</li>
+                  <li>Stationery Design</li>
+                  <li>Design Mockups</li>
+                  <li>PPT Design Template</li>
+                  <li>Brochure/ Profile Design</li>
                 </ul>
-                <div className={styles.servicePrice}>Starting at $15,000</div>
               </div>
 
-              {/* Digital Product Design */}
+              {/* Digital Marketing Management */}
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}>
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3 className={styles.serviceTitle}>Digital Product Design</h3>
-                <p className={styles.serviceDescription}>
-                  User-centered design solutions that create intuitive, engaging digital experiences across all platforms and devices.
-                </p>
+                <div className={styles.serviceIcon}></div>
+                <h3 className={styles.serviceTitle}>Digital Marketing Management</h3>
                 <ul className={styles.serviceFeatures}>
-                  <li>UX/UI Design</li>
-                  <li>Web Application Design</li>
-                  <li>Mobile App Design</li>
-                  <li>Design Systems</li>
-                  <li>Prototyping & Testing</li>
+                  <li>Marketing Brief</li>
+                  <li>Quarterly Marketing Plan</li>
+                  <li>Monthly Social Media Content Calendar</li>
+                  <li>Creatives</li>
+                  <li>Performance Marketing</li>
+                  <li>Analytics and Reporting</li>
                 </ul>
-                <div className={styles.servicePrice}>Starting at $25,000</div>
               </div>
 
-              {/* Creative Campaigns */}
+              {/* Website Development */}
               <div className={styles.serviceCard}>
-                <div className={styles.serviceIcon}>
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className={styles.serviceTitle}>Creative Campaigns</h3>
-                <p className={styles.serviceDescription}>
-                  Strategic marketing campaigns that capture attention, build brand awareness, and drive meaningful engagement with your audience.
-                </p>
+                <div className={styles.serviceIcon}></div>
+                <h3 className={styles.serviceTitle}>Website Development</h3>
                 <ul className={styles.serviceFeatures}>
-                  <li>Campaign Strategy</li>
-                  <li>Creative Direction</li>
-                  <li>Content Creation</li>
-                  <li>Social Media Design</li>
-                  <li>Print & Digital Assets</li>
+                  <li>Purchase Domain / Hosting</li>
+                  <li>Website UI Design</li>
+                  <li>Website Development</li>
+                  <li>SEO</li>
                 </ul>
-                <div className={styles.servicePrice}>Starting at $10,000</div>
+              </div>
+
+              {/* Business Scaling */}
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}></div>
+                <h3 className={styles.serviceTitle}>Business Scaling</h3>
+                <ul className={styles.serviceFeatures}>
+                  <li>Sales funnel optimization and lead generation</li>
+                  <li>CRM setup and management</li>
+                  <li>Process design and operational efficiency</li>
+                  <li>Tech adoption and deployment</li>
+                  <li>Business data analytics, reporting and insights</li>
+                </ul>
               </div>
             </div>
           </div>

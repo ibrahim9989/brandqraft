@@ -32,22 +32,19 @@ export default function AboutSection() {
       <div className={styles.container}>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutText} ref={textRef}>
-            <h2 className={styles.sectionTitle}>About Brandqraft</h2>
+            <h2 className={styles.sectionTitle}>About Us</h2>
             <p className={styles.aboutDescription}>
-              We turn innovative ideas into successful brands. Our end-to-end practice blends creative craft with data-driven strategy across branding, digital marketing, and business scaling.
+              At Brandqraft, we're passionate about transforming innovative ideas into thriving brands. We specialize in empowering new firms by providing comprehensive branding, digital marketing, and business scaling solutions.
             </p>
             <p className={styles.aboutDescription}>
-              We believe business success is a possibility for everyone—and we build systems that make it a reality.
+              We understand the unique challenges faced by new businesses, and we're committed to guiding them through every stage of their journey. Our approach combines creative expertise with data-driven strategies, ensuring measurable results and long-term success. We believe in more than just launching businesses; we believe in building legacies.
             </p>
             <p className={styles.aboutDescription}>
-              <strong>Vision:</strong> Make business success a strategic, simplified reality for every ambitious entrepreneur.
+              Our core belief is that business success is a possibility for everyone.
             </p>
-            <p className={styles.aboutDescription}>
-              <strong>Mission:</strong> Empower entrepreneurs with lifecycle solutions—from ideation to sustainable, autopilot growth.
-            </p>
-            <p className={styles.aboutDescription}>
-              <strong>Values:</strong> Problem Solving, Artistic Approach, Simplicity & Minimalism, Integrity, Trust.
-            </p>
+            <p className={styles.aboutDescription}><strong>Our Vision:</strong> Business success for every ambitious entrepreneur/business with a strategic and simplified way.</p>
+            <p className={styles.aboutDescription}><strong>Our Mission:</strong> To empower ambitious entrepreneurs and businesses by providing end to end business lifecycle solutions from ideation to sustainable/auto-pilot growth.</p>
+            <p className={styles.aboutDescription}><strong>Our Values:</strong> Problem Solving • Artistic approach • Simplicity and Minimalism • Integrity • Trust</p>
             <Link href="#contact" className={styles.ctaLink} data-cursor-hover>
               Talk to Us →
             </Link>
